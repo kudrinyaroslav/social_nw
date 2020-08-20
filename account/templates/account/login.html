@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Log-in {% endblock title %}
+
+{% block content %}
+
+<h1> Log-in </h1>
+
+<p> Please, use the foolowing form to log-in: </p>
+
+        <!-- форма входа в систему start -->
+        <form action="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Log in"></p>
+        </form>
+        <!-- форма входа в систему start -->
+
+{% endblock content %}
